@@ -1,0 +1,49 @@
+/* Global styles */
+body {
+  background-image: url("https://wallpapers.com/images/hd/animated-space-8jhfw5wzxu0zdmln.jpg"); /* Image de fond Star Wars */
+  background-size: cover;
+  background-position: center;
+  font-family: "Arial Black", sans-serif; /* Police d'écriture inspirée de Star Wars */
+}
+
+/* Profile card styles */
+.profile-card {
+  background-color: #333; /* Fond gris foncé */
+  border: 1px solid #666; /* Bordure grise */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px;
+  width: 300px; /* Largeur de la carte de profil */
+  margin: 40px auto; /* Marge pour centrer la carte */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
+}
+
+/* Profile image styles */
+.profile-image {
+  width: 150px; /* Largeur de l'image de profil */
+  height: 150px; /* Hauteur de l'image de profil */
+  border-radius: 50%; /* Image circulaire */
+  margin: 20px auto; /* Marge pour centrer l'image */
+  border: 2px solid #fff; /* Bordure blanche */
+  display: flex;
+  align-items: center;
+}
+
+/* Profile info styles */
+.profile-info {
+  color: #feda4a; /* Texte jaune-orangé */
+  font-size: 18px; /* Taille de police */
+  font-weight: bold; /* Police gras */
+  text-align: center; /* Texte centré */
+}
+
+/* H1 styles */
+h1 {
+  font-size: 24px; /* Taille de police du titre */
+  color: #fff; /* Titre blanc */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée sur le titre */
+}
+
+/* P styles */
+p {
+  margin-bottom: 20px; /* Marge entre les paragraphes */
+}

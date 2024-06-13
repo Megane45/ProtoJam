@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import CharacterDetails from "./components/CharacterDetails";
+
+import Profile from "./components/Profile";
+
 import CharacterList from "./components/CharacterList";
 
 const router = createBrowserRouter([
@@ -13,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/details/:id",
     element: <CharacterDetails />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 
