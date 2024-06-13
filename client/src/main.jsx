@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import CharacterList from "./components/CharacterList";
 import App from "./App";
-import CharacterList from "./pages/CharacterList";
+
 
 const router = createBrowserRouter([
   {
@@ -14,9 +15,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <CharacterList/>,
-    loader: () => 
-      fetch("https://miadil.github.io/starwars-api/api/cardGames.json")
-      .then(response => response.json())
   },
 ]);
 

@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
-function ImageGallery() {
+function CharacterList() {
   const [genderFilter, setGenderFilter] = useState(''); 
   const [speciesFilter, setSpeciesFilter] = useState(''); 
-  const [images, setImages] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
 
-  const fetchImages = async () => {
+  const fetchCharacters = async () => {
     try {
       const response = await fetch('https://miadil.github.io/starwars-api/api/cardGames.json');
       const data = await response.json();
-      setImages(data); 
+      setCharacters(data); 
     } catch (error) {
       console.error('Error fetching images:', error);
     }
   };
 
   useEffect(() => {
-    fetchImages();
+    fetchCharacters();
   }, []);
 
   return (
@@ -52,22 +52,22 @@ function ImageGallery() {
         </select></label>
       </div>
       <div className="image-grid">
-        {images
-          .filter((image) => {
-            if (genderFilter && image.gender !== genderFilter) {
+        {characters
+          .filter((character) => {
+            if (genderFilter && character.gender !== genderFilter) {
               return false;
             }
-            if (speciesFilter && image.species !== speciesFilter) {
+            if (speciesFilter && character.species !== speciesFilter) {
               return false;
             }
             return true;
           })
-          .map((image) => (
-            <img key={image.id} src={image.image} alt={image.name} />
+          .map((character) => (
+            <img key={character.id} src={character.image} alt={character.name} />
           ))}
       </div>
     </div>
   );
 }
 
-export default ImageGallery;
+export default CharacterList;
