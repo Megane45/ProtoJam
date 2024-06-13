@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import CharacterDetails from "./components/CharacterDetails";
 
 import CharacterList from "./components/CharacterList";
 import App from "./App";
-
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <CharacterList/>,
+    element: <CharacterList />,
+  },
+  {
+    path: "/details/:id",
+    element: <CharacterDetails />,
   },
 ]);
 

@@ -1,0 +1,41 @@
+.character-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.card {
+  width: 100%; /* La carte occupe toute la largeur disponible */
+  color: #333;
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 2px solid #333; /* Bordure autour de l'image */
+  border-radius: 10px 30px 0px 90px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0);
+}
+
+.card-details {
+  flex-grow: 1;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
