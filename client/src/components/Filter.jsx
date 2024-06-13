@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './CharacterList.css';
 
 function ImageGallery() {
   const [genderFilter, setGenderFilter] = useState(''); 
