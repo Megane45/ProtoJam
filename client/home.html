@@ -31,13 +31,24 @@
       <div id="scene">
         <div data-depth="0.1" class="bg">
           <img
-            src="./src/assets/images/background.png"
+            src="./src/assets/images/background3.jpg"
             alt="Background Image"
           />
         </div>
-        <div data-depth="0.2" class="rock1">
-          <img src="./src/assets/images/rock.png" alt="Rock Image" />
-        </div>
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <dotlottie-player
+          src="https://lottie.host/c11b873a-ba77-483b-9054-e65e532b1429/nAtJdNCDI4.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          direction="1"
+          playMode="normal"
+          loop
+          autoplay
+        ></dotlottie-player>
         <div data-depth="1.2" class="earth">
           <img src="./src/assets/images/earth.png" alt="Earth Image" />
         </div>
