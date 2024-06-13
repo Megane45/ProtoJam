@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
+
 import './CharacterList.css'
+
+import CharacterCard from './CharacterCard';
+
 
 function CharacterList() {
   const [genderFilter, setGenderFilter] = useState(''); 
@@ -46,7 +50,11 @@ function CharacterList() {
             return true;
           })
           .map((character) => (
+
             <img className='imageStarWars' key={character.id} src={character.image} alt={character.name} />
+
+            <CharacterCard key={character.id} character={character}/>
+
           ))}
       </div>
     </div>
