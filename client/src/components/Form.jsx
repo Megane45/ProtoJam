@@ -39,6 +39,13 @@ function Form() {
   // Function to close the modal
   return (
     <div className="bgZemmour">
+      <div className="buttonDating">
+        <a href="/">
+          <button type="button" className="BUTTTTON">
+            Start Dating Again
+          </button>
+        </a>
+      </div>
       <div className="cardForm">
         <div className="card-title">Registration Form</div>
         <form onSubmit={handleSubmit}>
