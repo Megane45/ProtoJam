@@ -32,7 +32,7 @@ function Form() {
   };
 
   return (
-    <div className="card">
+    <div className="cardForm">
       <div className="card-title">Registration Form</div>
       <form onSubmit={handleSubmit}>
         <label>

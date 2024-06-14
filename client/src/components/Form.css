@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* Styles généraux de la carte */
-.card {
+.cardForm {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
