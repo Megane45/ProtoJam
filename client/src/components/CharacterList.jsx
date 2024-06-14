@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import "./CharacterList.css";
-import "./CharacterDetails.css"
+import "./CharacterDetails.css";
 
 function CharacterList() {
   const [genderFilter, setGenderFilter] = useState("");
@@ -170,11 +170,11 @@ function CharacterList() {
               <h2>{currentCharacter.name}</h2>
             </div>
             <div className="card-right">
-              <p>Taille : {currentCharacter.height}</p>
-              <p>Poids : {currentCharacter.mass}</p>
-              <p>Couleur des cheveux : {currentCharacter.hairColor}</p>
-              <p>Couleur des yeux : {currentCharacter.eyeColor}</p>
-              <p>Couleur de peau : {currentCharacter.skinColor}</p>
+              <p>Size: {currentCharacter.height}</p>
+              <p>Weight: {currentCharacter.mass}</p>
+              <p>Hair color: {currentCharacter.hairColor}</p>
+              <p>Eye color:{currentCharacter.eyeColor}</p>
+              <p>Skin color:{currentCharacter.skinColor}</p>
             </div>
             <div className="like-dislike-buttons">
               <button

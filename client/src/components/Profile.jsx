@@ -19,16 +19,16 @@ function Profile() {
         <div className="profile-info">
           <h1>Name : Dark Zemmour</h1>
           <p>Species : Zabrak</p>
-          <p>Sex : Inconnu</p>
+          <p>Sex : unknown</p>
           <p>Age : 1000</p>
-          <p>Sexual orientation : Indéfini</p>
+          <p>Sexual orientation : undefined</p>
         </div>
         <button className="zemmurbutkisskiss" type="button" onClick={playSound}>
-          Futur Dark Vador
+          Future Darth Vader
         </button>
         <a href="/">
           <button className="zemmurbutkisskiss" type="button" id="discover-btn">
-            Retour à l'accueil
+            Homepage
           </button>
         </a>
       </div>
