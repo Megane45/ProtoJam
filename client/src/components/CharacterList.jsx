@@ -165,6 +165,22 @@ function CharacterList() {
               <p>Couleur des yeux : {currentCharacter.eyeColor}</p>
               <p>Couleur de peau : {currentCharacter.skinColor}</p>
             </div>
+            <div className="like-dislike-buttons">
+              <button
+                type="button"
+                className="like-button"
+                onClick={handleLikeCharacter}
+              >
+                <img src="./src/assets/images/like.png" alt="Like" />
+              </button>
+              <button
+                type="button"
+                className="dislike-button"
+                onClick={handleDislikeCharacter}
+              >
+                <img src="./src/assets/images/deslike.png" alt="Dislike" />
+              </button>
+            </div>
           </div>
         ) : (
           <p>No character found</p>
