@@ -42,7 +42,7 @@
   background-image: url("https://wallpapers-clan.com/wp-content/uploads/2023/10/star-wars-darth-vader-with-lightsaber-dark-desktop-wallpaper-preview.jpg");
   background-size: cover;
 }
-button {
+.zemmurbutkisskiss {
   background-color: rgb(255, 0, 0);
   color: black;
   border: none;
@@ -52,7 +52,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.zemmurbutkisskiss:hover {
   background-color: rgba(255, 255, 0, 0.8);
   color: black;
 }

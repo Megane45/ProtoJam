@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  background: url(../assets/images/background.png);
+  background-size: cover;
+  height: 100vh;
 }
 
 .Dropdowns {
@@ -19,11 +21,13 @@
 .card {
   background-color: #047aa26b;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
+  margin-top: 2rem;
+  box-shadow: 10px 10px 2px rgb(0 0 0 / 25%);
+  border: 2px solid #238cb0;
 }
 
 .card-left {
@@ -56,18 +60,21 @@
   align-items: center;
   justify-content: space-around;
   margin-top: 2rem;
+  flex-direction: row-reverse;
 }
 
-.btn-dislike {
-  background: none;
-  border: none;
+.dislike-button {
+  background: #047aa26b;
   cursor: pointer;
   color: #333;
   transition: color 0.3s;
 }
 
-.btn-dislike:hover {
-  color: #ff0000;
+.like-button {
+  background: #047aa26b;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
 }
 
 .card.disliked {
