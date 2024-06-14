@@ -17,11 +17,6 @@ function CharacterList() {
 
     // Ajouter le personnage actuel aux personnages aimés
     setLikedCharacters([...likedCharacters, currentCharacter]);
-
-    setTimeout(() => {
-      filterAndChooseRandomCharacter();
-      resetCard();
-    }, 300);
   };
 
   const fetchCharacters = async () => {
@@ -70,6 +65,10 @@ function CharacterList() {
     card.style.transform = "";
     card.classList.remove("disliked", "liked");
   };
+  setTimeout(() => {
+    filterAndChooseRandomCharacter();
+    resetCard();
+  }, 300);
 
   const handleDislikeCharacter = () => {
     const card = document.getElementById("character-card");
@@ -128,7 +127,7 @@ function CharacterList() {
       </a>
       <div className="Dropdowns">
         <div>
-          <label>
+          <label className="label1">
             Gender
             <select
               value={genderFilter}
@@ -197,7 +196,7 @@ function CharacterList() {
           <p>No character found</p>
         )}
       </div>
-        <h2 className="CharacterLiked">Characters You Liked</h2>
+      <h2 className="CharacterLiked">Characters You Liked</h2>
       <div className="liked-characters">
         {likedCharacters.map((character) => (
           <div key={character.name} className="liked-character-card">
