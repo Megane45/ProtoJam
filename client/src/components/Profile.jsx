@@ -23,6 +23,7 @@ function Profile() {
           <p>Age : 1000</p>
           <p>Sexual orientation : undefined</p>
         </div>
+        <div className="BUTTONSZEMMUR">
         <button className="zemmurbutkisskiss" type="button" onClick={playSound}>
           Future Darth Vader
         </button>
@@ -31,6 +32,7 @@ function Profile() {
             Homepage
           </button>
         </a>
+        </div>
       </div>
     </section>
   );

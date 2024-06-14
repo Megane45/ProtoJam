@@ -12,6 +12,7 @@
   text-align: center;
   font-family: "Arial", sans-serif;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  height: 40rem;
 }
 
 .profile-image {
@@ -41,6 +42,7 @@
   justify-content: center;
   background-image: url("https://wallpapers-clan.com/wp-content/uploads/2023/10/star-wars-darth-vader-with-lightsaber-dark-desktop-wallpaper-preview.jpg");
   background-size: cover;
+  height: 100vh;
 }
 .zemmurbutkisskiss {
   background-color: rgb(255, 0, 0);
@@ -55,4 +57,12 @@
 .zemmurbutkisskiss:hover {
   background-color: rgba(255, 255, 0, 0.8);
   color: black;
+}
+
+.BUTTONSZEMMUR {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5rem;
 }
