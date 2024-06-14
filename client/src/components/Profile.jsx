@@ -1,6 +1,13 @@
-import "./Profile.css";
+import "./Profile.css"; // Assurez-vous d'importer votre fichier CSS ici
 
 function Profile() {
+  const playSound = () => {
+    const audio = new Audio(
+      "https://fr.itunemachine.com/audio/darth-vader-imperial-march-ringtone-645.mp3"
+    );
+    audio.play();
+  };
+
   return (
     <section>
       <div className="profile-card">
@@ -11,11 +18,14 @@ function Profile() {
         />
         <div className="profile-info">
           <h1>Name : Dark Zemmour</h1>
-          <p>Spieces : Zabrak</p>
+          <p>Species : Zabrak</p>
           <p>Sex : Inconnu</p>
           <p>Age : 1000</p>
           <p>Sexual orientation : Indéfini</p>
         </div>
+        <button type="button" onClick={playSound}>
+          Futur Dark Vador
+        </button>
       </div>
     </section>
   );
