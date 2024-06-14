@@ -11,6 +11,9 @@ function Form() {
     planet: "",
   });
 
+  // State variable to control modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   // Function to handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +23,8 @@ function Form() {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Show modal thanking the user for registration
+    setIsModalOpen(true);
     // Here you can handle form submission logic, e.g., sending data to backend
     // Reset form fields after submission if needed
     setFormData({
@@ -31,6 +36,7 @@ function Form() {
     });
   };
 
+  // Function to close the modal
   return (
     <div className="cardForm">
       <div className="card-title">Registration Form</div>
@@ -84,7 +90,7 @@ function Form() {
             <option value="Ewok">Ewok</option>
             <option value="Neimoidian">Neimoidian</option>
             <option value="Gungan">Gungan</option>
-            <option value="Toydarian">Gungan</option>
+            <option value="Toydarian">Toydarian</option>
           </select>
         </label>
         <label>
@@ -108,6 +114,13 @@ function Form() {
         </label>
         <button type="submit">Submit</button>
       </form>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>Merci de vous être inscrit sur le site !</h2>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
