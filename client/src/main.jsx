@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CharacterDetails from "./components/CharacterDetails";
 
 import Profile from "./components/Profile";
+import Form from "./components/Form";
 
 import CharacterList from "./components/CharacterList";
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/form",
+    element: <Form />,
   },
 ]);
 

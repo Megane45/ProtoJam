@@ -1,0 +1,156 @@
+/* Import de la police inspirée de Star Wars */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Styles généraux de la carte */
+.card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ff0000; /* Contour rouge */
+  background-color: #000;
+  color: #ffe81f; /* Texte jaune */
+  font-family: "Roboto", sans-serif; /* Polices similaires à celles de Star Wars */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre */
+  position: relative; /* Pour positionner les éléments correctement */
+  background-image: url("background.jpg"); /* Exemple d'un fond d'écran de l'espace */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/* Animation pour l'effet de battement de cœur */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  55% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffe81f; /* Texte du titre en jaune */
+  animation: heartbeat 2.5s infinite; /* Appliquer l'animation heartbeat */
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffe81f; /* Texte des labels en jaune */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+  width: calc(
+    100% - 12px
+  ); /* Largeur ajustée pour s'adapter au bord du formulaire */
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 2px solid #ff0000; /* Bordure rouge */
+  background-color: #111; /* Fond sombre */
+  color: #ffe81f;
+  font-size: 14px;
+  border-radius: 5px; /* Coins arrondis */
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus {
+  outline: none;
+  border-color: #ffc107; /* Couleur de focus orangée */
+  box-shadow: 0 0 5px #ffc107; /* Légère ombre pour indiquer le focus */
+}
+
+form button[type="submit"] {
+  background-color: #ffe81f;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease; /* Transition sur la couleur de fond et la transformation */
+  transform-origin: center; /* Point d'origine de la transformation */
+}
+
+form button[type="submit"]:hover {
+  background-color: #ffc107; /* Couleur de survol orangée */
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.95) rotateY(360deg); /* Réduction de l'échelle et rotation */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre au clic */
+  background-color: #ff5722; /* Couleur différente au clic (exemple : orange vif) */
+  opacity: 0; /* Disparition */
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease,
+    background-color 0.6s ease,
+    opacity 0.6s ease; /* Transition plus longue pour l'effet de disparition */
+  border-radius: 25px;
+}
+form select[name="planet"] {
+  width: calc(
+    100% - 12px
+  ); /* Ajustement de la largeur pour s'aligner avec les autres champs */
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 2px solid #ff0000; /* Bordure rouge */
+  background-color: #111; /* Fond sombre */
+  color: #ffe81f; /* Texte en jaune */
+  font-size: 14px;
+  border-radius: 5px; /* Coins arrondis */
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+form select[name="planet"]:focus {
+  outline: none;
+  border-color: #ffc107; /* Couleur de focus orangée */
+  box-shadow: 0 0 5px #ffc107; /* Légère ombre pour indiquer le focus */
+}
+form select[name="species"] {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 2px solid #ff0000;
+  background-color: #111;
+  color: #ffe81f;
+  font-size: 14px;
+  border-radius: 5px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+form select[name="species"]:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 5px #ffc107;
+}
