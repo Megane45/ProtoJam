@@ -61,3 +61,94 @@ select {
 }
 
 /* Ajoutez d'autres styles selon vos besoins */
+/* CharacterList.css */
+
+/* Styles for the section displaying liked characters */
+.liked-characters {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.liked-characters h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styles for each individual liked character card */
+.liked-character-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.liked-character-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.liked-character-card p {
+  font-size: 18px;
+  color: #333;
+}
+.liked-characters {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a; /* Couleur sombre rappelant l'espace */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.liked-characters h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #feda4a; /* Jaune Star Wars */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Flexbox container for the liked character cards */
+.liked-character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styles for each individual liked character card */
+.liked-character-card {
+  padding: 20px;
+  background-color: #2b2b2b;
+  color: #fff; /* Couleur sombre pour la carte */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.liked-character-card:hover {
+  transform: translateY(-5px); /* Effet de levitation */
+}
+
+/* Media query for responsiveness (adjust as needed) */
+@media (max-width: 768px) {
+  .liked-character-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .liked-character-card img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
