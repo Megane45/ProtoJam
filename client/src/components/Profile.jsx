@@ -23,11 +23,11 @@ function Profile() {
           <p>Age : 1000</p>
           <p>Sexual orientation : Indéfini</p>
         </div>
-        <button type="button" onClick={playSound}>
+        <button className="zemmurbutkisskiss" type="button" onClick={playSound}>
           Futur Dark Vador
         </button>
         <a href="/">
-          <button type="button" id="discover-btn">
+          <button className="zemmurbutkisskiss" type="button" id="discover-btn">
             Retour à l'accueil
           </button>
         </a>

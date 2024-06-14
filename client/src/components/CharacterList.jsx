@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import "./CharacterList.css";
+import "./CharacterDetails.css"
 
 function CharacterList() {
   const [genderFilter, setGenderFilter] = useState("");

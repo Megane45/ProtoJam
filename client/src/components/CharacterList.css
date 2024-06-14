@@ -30,6 +30,7 @@ label {
   border-style: none;
   border-width: 0rem;
   box-shadow: -1px 4px 8px -4px rgba(85, 85, 85, 0.36);
+  margin-top: 5rem;
 }
 
 select {
@@ -47,17 +48,20 @@ select {
 /* CharacterList.css */
 
 #goprofile {
-  background-color: #8400ff; /* Couleur de fond */
+  background-color: #047aa26b; /* Couleur de fond */
   color: #fff; /* Couleur du texte */
   font-size: 16px; /* Taille de la police */
   padding: 10px 20px; /* Espacement intérieur */
   border: none; /* Pas de bordure */
   border-radius: 5px; /* Bordure arrondie */
   cursor: pointer; /* Curseur de type pointer */
+  margin-top: 5rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 #goprofile:hover {
-  background-color: #ffa726; /* Couleur de fond au survol */
+  background-color: #3b8eac6b; /* Couleur de fond au survol */
 }
 
 /* Ajoutez d'autres styles selon vos besoins */
