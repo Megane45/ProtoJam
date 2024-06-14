@@ -197,8 +197,8 @@ function CharacterList() {
           <p>No character found</p>
         )}
       </div>
+        <h2 className="CharacterLiked">Characters You Liked</h2>
       <div className="liked-characters">
-        <h2>Characters You Liked</h2>
         {likedCharacters.map((character) => (
           <div key={character.name} className="liked-character-card">
             <img src={character.image} alt={character.name} />

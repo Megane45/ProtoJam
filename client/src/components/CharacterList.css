@@ -21,7 +21,7 @@ label {
   letter-spacing: 0.07rem;
   font-style: normal;
   text-transform: capitalize;
-  color: #f4f0f0;
+  color: #feda4a;
   background-color: #047aa26b;
   border-radius: 2rem;
   -webkit-border-radius: 0.3125rem;
@@ -44,12 +44,13 @@ select {
   border: 2px solid #047aa26b;
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
+  border-radius: 2rem;
 }
 /* CharacterList.css */
 
 #goprofile {
   background-color: #047aa26b; /* Couleur de fond */
-  color: #fff; /* Couleur du texte */
+  color: #feda4a;
   font-size: 16px; /* Taille de la police */
   padding: 10px 20px; /* Espacement intérieur */
   border: none; /* Pas de bordure */
@@ -69,6 +70,8 @@ select {
 
 /* Styles for the section displaying liked characters */
 .liked-characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
   padding: 20px;
   background-color: #f0f0f0;
@@ -103,22 +106,18 @@ select {
 
 .liked-character-card p {
   font-size: 18px;
-  color: #333;
+  color: #feda4a;
 }
 .liked-characters {
   margin-top: 20px;
   padding: 20px;
-  background-color: #1a1a1a; /* Couleur sombre rappelant l'espace */
+  background-color: #047aa26b; /* Couleur sombre rappelant l'espace */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.liked-characters h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #feda4a; /* Jaune Star Wars */
-  text-transform: uppercase;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  box-shadow: 10px 10px 2px rgb(0 0 0 / 25%);
+  border: 2px solid #238cb0;
 }
 
 /* Flexbox container for the liked character cards */
@@ -131,13 +130,24 @@ select {
 /* Styles for each individual liked character card */
 .liked-character-card {
   padding: 20px;
-  background-color: #2b2b2b;
-  color: #fff; /* Couleur sombre pour la carte */
+  background-color: #238db086;
+  color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
+}
+
+.CharacterLiked {
+  background-color: #047aa26b;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #feda4a; /* Jaune Star Wars */
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .liked-character-card:hover {
