@@ -12,14 +12,6 @@ function CharacterList() {
   const [likedCharacters, setLikedCharacters] = useState([]);
   const [hearts, setHearts] = useState([]);
 
-  const handleLikeCharacter = () => {
-    const card = document.getElementById("character-card");
-    card.classList.add("liked");
-
-    // Ajouter le personnage actuel aux personnages aimés
-    setLikedCharacters([...likedCharacters, currentCharacter]);
-  };
-
   const fetchCharacters = async () => {
     try {
       const response = await fetch(
@@ -34,22 +26,9 @@ function CharacterList() {
   };
 
   useEffect(() => {
-    const fetchCharacters = async () => {
-      try {
-        const response = await fetch(
-          "https://miadil.github.io/starwars-api/api/all.json"
-        );
-        const data = await response.json();
-        setCharacters(data);
-        setCurrentCharacter(data[Math.floor(Math.random() * data.length)]);
-      } catch (error) {
-        console.error("Error fetching characters:", error);
-      }
-    };
     fetchCharacters();
   }, []);
 
-  // Function to filter and choose random character
   const filterAndChooseRandomCharacter = useCallback(() => {
     const filteredCharacters = characters.filter((character) => {
       if (genderFilter && character.gender !== genderFilter) {
@@ -69,42 +48,42 @@ function CharacterList() {
     }
   }, [genderFilter, characters]);
 
-  // Effect to update character on filter change
   useEffect(() => {
     filterAndChooseRandomCharacter();
   }, [filterAndChooseRandomCharacter]);
 
-  // Function to reset card styles
   const resetCard = () => {
     const card = document.getElementById("character-card");
-    card.style.transition = "transform 0.3s ease, opacity 0.3s ease";
-    card.style.transform = "";
-    card.classList.remove("disliked", "liked");
+    if (card) {
+      card.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+      card.style.transform = "";
+      card.classList.remove("disliked", "liked");
+    }
   };
-  setTimeout(() => {
-    filterAndChooseRandomCharacter();
-    resetCard();
-  }, 300);
 
-  // Function to handle liking a character
+  // Function to generate hearts animation
+  const generateHearts = () => {
+    const newHearts = Array.from({ length: 20 }, (_, index) => ({
+      id: index, // Utilisation d'un identifiant unique pour la clé
+      left: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 10}s`,
+    }));
+    setHearts(newHearts);
+    setTimeout(() => {
+      setHearts([]);
+    }, 10000); // 10 secondes en millisecondes
+  };
+
   const handleLikeCharacter = () => {
     const card = document.getElementById("character-card");
-    card.classList.add("liked");
+    if (card) {
+      card.classList.add("liked");
+    }
 
-    setLikedCharacters([...likedCharacters, currentCharacter]);
+    const newLikedCharacters = [...likedCharacters, currentCharacter];
+    setLikedCharacters(newLikedCharacters);
 
-    // Function to generate hearts animation
-    const generateHearts = () => {
-      const newHearts = Array.from({ length: 20 }, () => ({
-        left: `${Math.random() * 100}%`, // Utilisation de template literals
-        animationDelay: `${Math.random() * 10}s`, // Augmentation de la durée à 10 secondes
-      }));
-      setHearts(newHearts);
-      setTimeout(() => {
-        setHearts([]);
-      }, 10000); // 10 secondes en millisecondes
-    };
-
+    // Simuler un match de manière aléatoire
     const isMatch = Math.random() > 0.6;
     if (isMatch) {
       generateHearts();
@@ -116,42 +95,42 @@ function CharacterList() {
     }, 300);
   };
 
-  // Function to handle disliking a character
   const handleDislikeCharacter = () => {
     const card = document.getElementById("character-card");
-    card.classList.add("disliked");
+    if (card) {
+      card.classList.add("disliked");
+    }
     setTimeout(() => {
       filterAndChooseRandomCharacter();
       resetCard();
     }, 300);
   };
 
-  // Function to handle swipe start
   const handleSwipeStart = (e) => {
     setStartX(e.clientX || e.touches[0].clientX);
     setDragging(true);
     document.body.style.overflow = "hidden";
   };
 
-  // Function to handle swipe move
   const handleSwipeMove = (e) => {
     if (!dragging) return;
     setCurrentX(e.clientX || e.touches[0].clientX);
     const translateX = currentX - startX;
     const card = document.getElementById("character-card");
 
-    card.style.transform = `translateX(${translateX}px)`;
+    if (card) {
+      card.style.transform = `translateX(${translateX}px)`;
 
-    if (translateX < -150) {
-      card.classList.add("disliked");
-    } else if (translateX > 150) {
-      card.classList.add("liked");
-    } else {
-      card.classList.remove("disliked", "liked");
+      if (translateX < -150) {
+        card.classList.add("disliked");
+      } else if (translateX > 150) {
+        card.classList.add("liked");
+      } else {
+        card.classList.remove("disliked", "liked");
+      }
     }
   };
 
-  // Function to handle swipe end
   const handleSwipeEnd = () => {
     if (!dragging) return;
     setDragging(false);
@@ -173,7 +152,7 @@ function CharacterList() {
       <div className="hearts-container">
         {hearts.map((heart) => (
           <div
-            key={heart.id}
+            key={`heart-${heart.id}`} // Utilisation d'une clé unique
             className="heart"
             style={{
               left: heart.left,
@@ -185,23 +164,23 @@ function CharacterList() {
         ))}
       </div>
       <div className="buttonUpList">
-      <a href="/profile">
-        <button type="button" id="goprofile">
-        Profile
-        </button>
-      </a>
-      <a href="/form">
-        <button type="button" id="goprofile">
-        Form
-        </button>
-      </a>
-      <a href="/home">
-        <button type="button" id="goprofile">
-        Home
-        </button>
-      </a>
+        <a href="/profile">
+          <button type="button" id="goprofile">
+            Profile
+          </button>
+        </a>
+        <a href="/form">
+          <button type="button" id="goprofile">
+            Form
+          </button>
+        </a>
+        <a href="/home">
+          <button type="button" id="goprofile">
+            Home
+          </button>
+        </a>
       </div>
-      <div className="Dropdowns"> 
+      <div className="Dropdowns">
         <div>
           <label className="label1">
             Gender
@@ -248,8 +227,8 @@ function CharacterList() {
               <p>Size: {currentCharacter.height}</p>
               <p>Weight: {currentCharacter.mass}</p>
               <p>Hair color: {currentCharacter.hairColor}</p>
-              <p>Eye color:{currentCharacter.eyeColor}</p>
-              <p>Skin color:{currentCharacter.skinColor}</p>
+              <p>Eye color: {currentCharacter.eyeColor}</p>
+              <p>Skin color: {currentCharacter.skinColor}</p>
             </div>
             <div className="like-dislike-buttons">
               <button
