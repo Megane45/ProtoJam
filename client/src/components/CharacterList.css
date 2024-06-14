@@ -166,3 +166,9 @@ select {
     margin-bottom: 10px;
   }
 }
+
+.buttonUpList {
+  display: flex;
+  gap: 8rem;
+  flex-direction: row-reverse;
+}
