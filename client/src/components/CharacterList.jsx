@@ -9,6 +9,20 @@ function CharacterList() {
   const [startX, setStartX] = useState(0);
   const [currentX, setCurrentX] = useState(0);
   const [dragging, setDragging] = useState(false);
+  const [likedCharacters, setLikedCharacters] = useState([]);
+
+  const handleLikeCharacter = () => {
+    const card = document.getElementById("character-card");
+    card.classList.add("liked");
+
+    // Ajouter le personnage actuel aux personnages aimés
+    setLikedCharacters([...likedCharacters, currentCharacter]);
+
+    setTimeout(() => {
+      filterAndChooseRandomCharacter();
+      resetCard();
+    }, 300);
+  };
 
   const fetchCharacters = async () => {
     try {
@@ -55,15 +69,6 @@ function CharacterList() {
     card.style.transition = "transform 0.3s ease, opacity 0.3s ease";
     card.style.transform = "";
     card.classList.remove("disliked", "liked");
-  };
-
-  const handleLikeCharacter = () => {
-    const card = document.getElementById("character-card");
-    card.classList.add("liked");
-    setTimeout(() => {
-      filterAndChooseRandomCharacter();
-      resetCard();
-    }, 300);
   };
 
   const handleDislikeCharacter = () => {
@@ -191,6 +196,16 @@ function CharacterList() {
         ) : (
           <p>No character found</p>
         )}
+      </div>
+      <div className="liked-characters">
+        <h2>Characters You Liked</h2>
+        {likedCharacters.map((character) => (
+          <div key={character.name} className="liked-character-card">
+            <img src={character.image} alt={character.name} />
+            <p>{character.name}</p>
+            {/* Affiche d'autres détails si nécessaire */}
+          </div>
+        ))}
       </div>
     </div>
   );
