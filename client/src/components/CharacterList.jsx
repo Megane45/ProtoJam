@@ -115,6 +115,11 @@ function CharacterList() {
 
   return (
     <div className="ALLpageCatalog">
+      <a href="/profile">
+        <button type="button" id="goprofile">
+          Go to Profile
+        </button>
+      </a>
       <div className="Dropdowns">
         <div>
           <label>

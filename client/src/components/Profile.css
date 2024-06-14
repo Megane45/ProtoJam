@@ -1,63 +1,58 @@
-/* Global styles */
-body {
-  background-image: url("https://wallpapers.com/images/hd/animated-space-8jhfw5wzxu0zdmln.jpg"); /* Image de fond Star Wars */
-  background-size: cover;
-  background-position: center;
-  font-family: "Arial Black", sans-serif; /* Police d'écriture inspirée de Star Wars */
-}
+/* Profile.css */
 
-/* Profile card styles */
 .profile-card {
-  background-color: #333; /* Fond gris foncé */
-  border: 1px solid #666; /* Bordure grise */
-  border-radius: 10px; /* Coins arrondis */
-  padding: 20px;
-  width: 300px; /* Largeur de la carte de profil */
-  margin: 40px auto; /* Marge pour centrer la carte */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
+  background-color: black;
+  color: rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  padding: 100px;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  max-width: 100%; /* Garantit que la carte reste responsivs */
+  margin: 100px auto;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
-/* Profile image styles */
 .profile-image {
-  width: 150px; /* Largeur de l'image de profil */
-  height: 150px; /* Hauteur de l'image de profil */
-  border-radius: 50%; /* Image circulaire */
-  margin: 20px auto; /* Marge pour centrer l'image */
-  border: 2px solid #fff; /* Bordure blanche */
-  display: flex;
-  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 0, 0);
+  margin-bottom: 20px;
 }
 
-/* Profile info styles */
 .profile-info {
-  color: #feda4a; /* Texte jaune-orangé */
-  font-size: 18px; /* Taille de police */
-  font-weight: bold; /* Police gras */
-  text-align: center; /* Texte centré */
+  margin-bottom: 20px;
 }
 
-/* H1 styles */
-h1 {
-  font-size: 24px; /* Taille de police du titre */
-  color: #fff; /* Titre blanc */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée sur le titre */
+.profile-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* P styles */
-p {
-  margin-bottom: 20px; /* Marge entre les paragraphes */
-}
-.audio-button {
-  margin-top: 10px;
-  padding: 10px 20px;
+.profile-info p {
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 5px;
 }
 
-.audio-button:hover {
-  background-color: #0056b3;
+.profileback {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://wallpapers-clan.com/wp-content/uploads/2023/10/star-wars-darth-vader-with-lightsaber-dark-desktop-wallpaper-preview.jpg");
+  background-size: cover;
+}
+button {
+  background-color: rgb(255, 0, 0);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 0, 0.8);
+  color: black;
 }

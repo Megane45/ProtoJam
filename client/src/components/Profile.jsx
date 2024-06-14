@@ -9,7 +9,7 @@ function Profile() {
   };
 
   return (
-    <section>
+    <section className="profileback">
       <div className="profile-card">
         <img
           src="https://pics.craiyon.com/2023-10-13/3206a7b73cf34ec399ea009a3b72be66.webp"
@@ -26,6 +26,11 @@ function Profile() {
         <button type="button" onClick={playSound}>
           Futur Dark Vador
         </button>
+        <a href="/">
+          <button type="button" id="discover-btn">
+            Retour à l'accueil
+          </button>
+        </a>
       </div>
     </section>
   );

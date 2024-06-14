@@ -47,3 +47,20 @@ select {
   width: 300px;
   height: 300px;
 }
+/* CharacterList.css */
+
+#goprofile {
+  background-color: #8400ff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  font-size: 16px; /* Taille de la police */
+  padding: 10px 20px; /* Espacement intérieur */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Bordure arrondie */
+  cursor: pointer; /* Curseur de type pointer */
+}
+
+#goprofile:hover {
+  background-color: #ffa726; /* Couleur de fond au survol */
+}
+
+/* Ajoutez d'autres styles selon vos besoins */
