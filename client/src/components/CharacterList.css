@@ -12,7 +12,7 @@
   padding-top: 2rem;
 }
 
-label {
+.label1 {
   display: flex;
   gap: 0.5rem;
   font-family: "Roboto Mono", sans-serif;
@@ -196,4 +196,10 @@ select {
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+
+.buttonUpList {
+  display: flex;
+  gap: 8rem;
+  flex-direction: row-reverse;
 }

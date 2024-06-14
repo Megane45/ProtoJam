@@ -12,7 +12,27 @@ function CharacterList() {
   const [likedCharacters, setLikedCharacters] = useState([]);
   const [hearts, setHearts] = useState([]);
 
-  // Effect to fetch characters
+  const handleLikeCharacter = () => {
+    const card = document.getElementById("character-card");
+    card.classList.add("liked");
+
+    // Ajouter le personnage actuel aux personnages aimés
+    setLikedCharacters([...likedCharacters, currentCharacter]);
+  };
+
+  const fetchCharacters = async () => {
+    try {
+      const response = await fetch(
+        "https://miadil.github.io/starwars-api/api/all.json"
+      );
+      const data = await response.json();
+      setCharacters(data);
+      setCurrentCharacter(data[Math.floor(Math.random() * data.length)]);
+    } catch (error) {
+      console.error("Error fetching characters:", error);
+    }
+  };
+
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
@@ -61,6 +81,10 @@ function CharacterList() {
     card.style.transform = "";
     card.classList.remove("disliked", "liked");
   };
+  setTimeout(() => {
+    filterAndChooseRandomCharacter();
+    resetCard();
+  }, 300);
 
   // Function to handle liking a character
   const handleLikeCharacter = () => {
@@ -160,14 +184,26 @@ function CharacterList() {
           </div>
         ))}
       </div>
+      <div className="buttonUpList">
       <a href="/profile">
         <button type="button" id="goprofile">
-          Go to Profile
+        Profile
         </button>
       </a>
-      <div className="Dropdowns">
+      <a href="/form">
+        <button type="button" id="goprofile">
+        Form
+        </button>
+      </a>
+      <a href="/home">
+        <button type="button" id="goprofile">
+        Home
+        </button>
+      </a>
+      </div>
+      <div className="Dropdowns"> 
         <div>
-          <label>
+          <label className="label1">
             Gender
             <select
               value={genderFilter}
