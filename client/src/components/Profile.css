@@ -47,3 +47,17 @@ h1 {
 p {
   margin-bottom: 20px; /* Marge entre les paragraphes */
 }
+.audio-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.audio-button:hover {
+  background-color: #0056b3;
+}
